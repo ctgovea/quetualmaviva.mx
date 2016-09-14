@@ -1,4 +1,43 @@
-body{
-    font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+/** {
+    box-sizing: border-box;
+}*/
+
+body {
+    font: 1em/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #878787;
+    margin: 0;
 }
 
+h1 {
+    color: rgba(255,255,255,1);
+    font-weight: normal;
+    line-height: 1.7;
+    text-shadow: 0 1px 1px rgba(0,0,0,.8);
+}
+
+.main-header {
+    padding-top: 30px;
+    height: 450px;
+    background: #ffa949 no-repeat center;
+    background-size: cover;
+}
+
+.primary-content {
+    text-align: center;
+}
+
+.background-light {
+    background-color: #f8f8f8;
+    padding: 20px;
+}
+
+.main-footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    border-bottom: 10px solid #ffa949;
+    text-align: center;
+}
+
+.arrow {
+    width: 50px;
+}
