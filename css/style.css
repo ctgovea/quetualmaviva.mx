@@ -1,44 +1,176 @@
-/** {
-    box-sizing: border-box;
-}*/
+
+/* Base Styles -------------------- */
+
+* {
+  box-sizing: border-box;
+}
 
 body {
-    font: 1em/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: #878787;
-    margin: 0;
-    text-align: center;
+  color:  #676767;
+  margin: 0;
+  font: 1em/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-align: center;
 }
 
-h1 {
-    color: rgba(255,255,255,1);
-    font-weight: normal;
-    line-height: 1.7;
-    text-shadow: 0 1px 1px rgba(0,0,0,.8);
+h1 {  
+  font-size: 5.5rem; /* 90px/16px  */
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: rgba(255, 255, 255, 1);
+  font-weight: normal;
+  line-height: 1.3;
+  text-shadow: 0 3px 3px rgba(0,0,0,.8);
+  max-width: 60%;
+  margin: 0 auto;
 }
+
+img {
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+
+img .circle{
+  border-radius: 100%;
+}
+
+/* Pseudo-classes ------------------ */
+
+a:link {
+  color: rgb(255, 169, 73);
+  text-decoration: none;
+}
+
+a:visited {
+  color: lightblue;
+}
+
+a:hover {
+  color: rgba(255, 169, 73, .4);
+}
+
+a:active {
+  color: lightcoral;
+}
+
+
+/* Main Styles --------------------- */
 
 .main-header {
-    padding-top: 30px;
-    height: 450px;
-    background: #ffa949 no-repeat center;
-    background-size: cover;
+  background-color: #ffa949;
+  padding-top: 170px;
+  height: 750px;
+  background: linear-gradient(0deg, #fff, transparent 65%),
+    #ffa949 url('../img/volcanes.jpg') no-repeat center;
+  background-size: cover;
 }
 
-.primary-content {
-    text-align: center;
+.title {
+  color: white;
+  font-size: 1.5em; /* 24px/16px */
+}
+
+.main-content {
+  padding-top: 25px;
+  padding-bottom: 95px;
 }
 
 .background-light {
-    background-color: #f8f8f8;
-    padding: 20px;
+  background-color: #f8f8f8;
+  padding: 20px;
+  color: #383A3F;
+}
+
+.container {
+  width: 80%;
+  padding: 50px;
+  margin: auto;
+  max-width: 960px;
+  font-size: 1.25rem;
+}
+
+.intro {
+ font-size:1.5rem;
+}
+
+.container .title {
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: 400;
+  color: #444;
+  padding-bottom: 20px;
+
+}
+
+.author{
+  float: left;
+  width: 25%;
+  padding: 0 20px 20px 20px;
+}
+
+.author img{
+  width:125px;
+  border-radius: 100%;
+}
+
+.quote{
+  float: right;
+  width: 75%;
+  font-size: 1.625rem;
+  font-style: italic;
+  /*padding: 1%;*/
+}
+
+.quote-by {
+  padding: 25px 3px 0 0;
+  text-align: right;
+  font-style:normal;
+  font-weight: bold;
+  font-size: 1.45rem;
+}
+
+.quote-by .more-info {
+  padding-top: 5px;
+  font-weight: normal;
+  font-size: 1.0625rem;
+  color: #676767;
+}
+
+.group:after{
+  content:"";
+  display: table;
+  clear:both;
 }
 
 .main-footer {
-    padding-top: 60px;
-    padding-bottom: 60px;
-    border-bottom: 10px solid #ffa949;
-    text-align: center;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  border-bottom: 10px solid #ffa949;
 }
 
 .arrow {
-    width: 50px;
+  width: 50px;
+  margin-top: 150px;
 }
+
+
+
+/* Media Queries  -----------------------*/
+
+@media (max-width: 960px) {
+
+  
+
+}
+
+@media (max-width:480px){
+  .author img{
+    display:none;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 700px){
+  body {
+    background: seagreen;
+  }
+}
+
+
+
