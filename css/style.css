@@ -133,6 +133,11 @@ a:active {
   color: #676767;
 }
 
+.quote-by p {
+  margin: 0;
+  padding: 0px;
+}
+
 .group:after{
   content:"";
   display: table;
