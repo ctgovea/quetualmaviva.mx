@@ -99,11 +99,25 @@ a:active {
 }
 
 .prayer-background{
-  background: url('../img/bricks-lights.jpg') no-repeat center;
+  background: 
+     /* linear-gradient(0deg, rgba(12,13,13,0.4), rgba(12,13,13,0.4) ), */ 
+      linear-gradient(0deg, rgba(255,255,255,0.4), transparent ), 
+     url('../img/bricks-lights.jpg') no-repeat center;
   background-size: cover;
-  height: 300px;
-  color: white;
-  font-size: 1.75rem;
+  height: 350px;
+}
+
+p.prayer,
+p.prayer-by {
+ /* color: #f3f3f3; */
+   color: #030303;
+   
+}
+
+p.prayer{
+  font-weight: 400;
+  font-size: 1.625rem;
+  /* text-shadow: 0 1px 1px rgba(255,255,255,.8); */
 }
 
 .quote p {
