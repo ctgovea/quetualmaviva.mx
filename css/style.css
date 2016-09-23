@@ -109,7 +109,6 @@ a:active {
 
 p.prayer,
 p.prayer-by {
- /* color: #f3f3f3; */
    color: #030303;
    
 }
@@ -117,7 +116,6 @@ p.prayer-by {
 p.prayer{
   font-weight: 400;
   font-size: 1.5rem;
-  /* text-shadow: 0 1px 1px rgba(255,255,255,.8); */
 }
 
 .quote p {
@@ -127,7 +125,6 @@ p.prayer{
 }
 
 .author{
-  /*display: block;*/
   margin-top: 20px;
 }
 
