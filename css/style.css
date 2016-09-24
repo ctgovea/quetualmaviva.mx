@@ -86,10 +86,7 @@ a:active {
 }
 
 .container {
-  width: 80%;
-  padding: 40px;
-  margin: auto;
-  max-width: 960px;
+  padding: 1.5em 1em;
   font-size: 1.25rem;
 }
 
@@ -182,43 +179,15 @@ p.prayer{
    Media Queries  
 ==========================================*/
 
-@media (max-width: 768px) {
-
-  .main-header{
-    max-height: 380px;
-    padding: 35px 25px 0;
-  }
-
-  h1{
-    font-size: 3.75rem;
-  }
-
-  .arrow{
-    display:none;
-  }
-
-  .author{
-    display:none;
-    width: 0;
-  }
-
-  .quote {
-    width: 100%;
-  }
-
-  body {
-    background: lightblue;
+@media (min-width: 769px) {
+  .container {
+    width: 80%;
+    margin: auto;
+    max-width: 1000px;
   }
 
 }
 
-/*
-@media (min-width: 481px) and (max-width: 700px){
-  body {
-    background: seagreen;
-  }
-}
-*/
 
 
 
