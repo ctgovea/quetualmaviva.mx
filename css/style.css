@@ -76,7 +76,7 @@ a:active {
 
 .main-content {
   padding-top: 25px;
-  padding-bottom: 95px;
+  padding-bottom: 10em;
 }
 
 .background-light {
@@ -163,9 +163,9 @@ p.prayer{
 }
 
 .main-footer {
+  background-color: #ffa949;
   padding-top: 60px;
-  padding-bottom: 60px;
-  border-bottom: 10px solid #ffa949;
+  padding-bottom: 60px;  
 }
 
 .arrow {
@@ -180,6 +180,10 @@ p.prayer{
 ==========================================*/
 
 @media (min-width: 769px) {
+  .main-content {
+    min-height: 100vh;
+  }
+
   .container {
     width: 80%;
     margin: auto;
