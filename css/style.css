@@ -164,8 +164,9 @@ p.prayer{
 
 .main-footer {
   background-color: #ffa949;
-  padding-top: 60px;
-  padding-bottom: 60px;  
+  padding-top: 20px;
+  padding-bottom: 20px;  
+  height: 40;
 }
 
 .arrow {
