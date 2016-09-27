@@ -80,9 +80,9 @@ a:active {
 }
 
 .background-light {
-  background-color: #f8f8f8;
+  background-color: #F5F5F5; /* #f8f8f8;*/
   padding: 20px;
-  color: #383A3F;
+  color:#383A3F;
 }
 
 .container {
@@ -163,10 +163,12 @@ p.prayer{
 }
 
 .main-footer {
-  background-color: #ffa949;
+  background-color: #F5F5F5;
+  border-top: 1px solid #D2D2D2;
+  color: #9DA2A6;
   padding-top: 20px;
   padding-bottom: 20px;  
-  height: 40;
+  height: 90px;
 }
 
 .arrow {
@@ -186,11 +188,17 @@ p.prayer{
   }
 
   .container {
-    width: 80%;
-    margin: auto;
+    width: 90%;
+    margin: 0 auto;
     max-width: 1000px;
   }
+}
 
+@media (min-width: 1025px){
+  .container {
+    width: 80%;
+    max-width: 1150px;
+  }
 }
 
 
