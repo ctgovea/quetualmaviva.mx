@@ -158,7 +158,7 @@ p.prayer{
   margin: 0;
 }
 
-.group:after{
+.clearfix:after{
   content:"";
   display: table;
   clear:both;
