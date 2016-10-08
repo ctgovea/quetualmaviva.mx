@@ -103,6 +103,7 @@ a:active {
   background: linear-gradient(0deg, #fff, transparent 80%),
     #ffa949 url('../img/volcanes.jpg') no-repeat center;
   background-size: cover;
+  min-height:250px;
 }
 
 .subheader {
