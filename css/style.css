@@ -312,6 +312,11 @@ ul.faq-description{
   .group-photo-background {
     height: 520px;
   }
+
+  .intro {
+    font-size: 1.325rem;
+    max-width: 70%;
+  }
 }
 
 @media (min-width: 1025px){
@@ -329,6 +334,17 @@ ul.faq-description{
   }
 
   p.prayer{
+    font-size: 1.5rem;
+  }
+
+  .intro {
+    max-width: 55%;
+  }
+}
+
+@media (min-width: 1400px){
+  .intro {
+    max-width: 48%;
     font-size: 1.5rem;
   }
 }
