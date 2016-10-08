@@ -116,8 +116,7 @@ a:active {
 }
 
 .main-content {
-  padding-top: 25px;
-  padding-bottom: 10em;
+  padding-top: 25px;  
 }
 
 .background-light {
@@ -237,6 +236,12 @@ ul.faq-description{
   padding-left: 20px;
 }
 
+.group-photo-background {
+  padding-top: 5%; /* 170px; */
+  height: 280px;
+  background: #fff url('../img/retiro.jpg') no-repeat center;
+  background-size: cover;
+}
 
 /* ======================================= 
    Media Queries  
@@ -301,6 +306,10 @@ ul.faq-description{
   .secondary-30,
   .tertiary-30 {
     width:33.33%;
+  }
+
+  .group-photo-background {
+    height: 520px;
   }
 }
 
