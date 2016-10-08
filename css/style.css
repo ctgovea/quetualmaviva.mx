@@ -112,6 +112,7 @@ a:active {
   font-weight: 600;
   margin-top: 2%;
   padding: 20px;
+  display:none;
 }
 
 .main-content {
@@ -236,6 +237,7 @@ ul.faq-description{
   padding-left: 20px;
 }
 
+
 /* ======================================= 
    Media Queries  
 ==========================================*/
@@ -273,19 +275,33 @@ ul.faq-description{
     padding-right: 1em;
   }
 
-  .primary {
-    width: 50%;
-  }
-
-  .secondary {
-    width: 50%;
-  }
-
   .faq-card {
     padding: 20px;
     margin-bottom: 25px;
   }
 
+  .feat-image {
+    float: left;
+    width: 310px;
+    margin-top: 5px;
+    margin-right: 25px;
+    margin-bottom: 25px;
+    padding: 5px;
+    border-style: solid;
+    border-color: rgb(217,228,234);
+    border-image:initial;
+  }
+
+  .primary,
+  .secondary {
+    width: 50%;
+  }
+
+  .primary-30,
+  .secondary-30,
+  .tertiary-30 {
+    width:33.33%;
+  }
 }
 
 @media (min-width: 1025px){
