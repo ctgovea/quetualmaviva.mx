@@ -24,6 +24,11 @@ h1 {
   vertical-align: center;
 }
 
+h2 {
+  margin: 0 auto;
+  padding-bottom: 5%;
+}
+
 img {
   max-width: 100%;
   margin-bottom: 20px;
