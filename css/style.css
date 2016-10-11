@@ -166,7 +166,7 @@ p.prayer{
 }
 
 .quote p {
-  font-size: 1.625rem;
+  font-size: 1.25rem;
   font-style: italic;
   margin: 0;
 }
@@ -288,6 +288,7 @@ ul.faq-description{
     max-width: 1000px;
   }
 
+  .quote p,
   p.prayer{
     font-size: 1.325rem;
   }
@@ -361,6 +362,7 @@ ul.faq-description{
     margin-bottom: 30px;
   }
 
+  .quote p,
   p.prayer{
     font-size: 1.5rem;
   }
