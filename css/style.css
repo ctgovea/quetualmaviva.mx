@@ -46,10 +46,6 @@ img {
   margin-bottom: 20px;
 }
 
-img .circle{
-  border-radius: 100%;
-}
-
 p {
   font-size: 1rem;
 }
@@ -67,6 +63,10 @@ p {
 
 .text-semibold {
   font-weight: 300;
+}
+
+.circle{
+  border-radius: 100%;
 }
 
 /* ======================================= 
@@ -216,6 +216,21 @@ p.prayer{
   margin-top: 150px;
 }
 
+.book-cover {
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.book-cover,
+.program{
+  margin-top: 10px;
+}
+
+.program li {
+  line-height: 1.6em;
+}
+
 .link-social{
   margin-right: 5px;
 }
@@ -317,6 +332,17 @@ ul.faq-description{
     font-size: 1.325rem;
     max-width: 70%;
   }
+
+  .book-cover {
+    float: left;
+    width: 30%;
+  }
+
+  .program {
+    width: 70%;
+    float: right;
+  }
+
 }
 
 @media (min-width: 1025px){
@@ -340,6 +366,15 @@ ul.faq-description{
   .intro {
     max-width: 55%;
   }
+
+  .book-cover {
+    width: 40%;    
+  }
+
+  .program {
+    width: 60%;
+  }
+
 }
 
 @media (min-width: 1400px){
