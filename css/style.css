@@ -107,7 +107,7 @@ a:active {
   background: linear-gradient(0deg, #fff, transparent 80%),
     #ffa949 url('../img/volcanes.jpg') no-repeat center;
   background-size: cover;
-  min-height:250px;
+  min-height:330px;
 }
 
 .subheader {
@@ -115,9 +115,9 @@ a:active {
   color: rgba(68, 68, 77, 1);
   text-shadow: 0 1px 1px rgba(255,255,255,.8);
   font-weight: 600;
-  margin-top: 2%;
+  margin-top: 7%;
   padding: 20px;
-  display:none;
+  margin-bottom:20px;
 }
 
 .main-content {
@@ -125,25 +125,21 @@ a:active {
 }
 
 .background-light {
-  background-color: #F5F5F5; /* #f8f8f8;*/
+  background-color: #F5F5F5; 
   padding: 20px;
   color:#383A3F;
 }
 
-.container {
+.main-header .container {
+  padding: 10px;
+}
+
+.main-content .container {
   padding: 1.5em 1em;
 }
 
 .intro {
  font-size: 1.25rem;
-}
-
-.container .title {
-  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, sans-serif;
-  font-weight: 400;
-  color: #444;
-  padding-bottom: 20px;
-
 }
 
 .prayer-background{
@@ -341,6 +337,10 @@ ul.faq-description{
     float: right;
   }
 
+  .subheader {
+    font-size: 1.125rem;
+  }
+
 }
 
 @media (min-width: 1025px){
@@ -374,6 +374,10 @@ ul.faq-description{
     width: 60%;
   }
 
+  
+  .subheader {
+    font-size: 1.25rem;
+  }
 }
 
 @media (min-width: 1400px){
