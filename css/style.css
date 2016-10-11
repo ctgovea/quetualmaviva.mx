@@ -32,7 +32,7 @@ h3 {
 
 h2 {
   margin: 0 auto;
-  padding-bottom: 4%;
+  padding: 2% 0;
   font-size: 1.625rem;
 }
 
@@ -126,7 +126,7 @@ a:active {
 
 .background-light {
   background-color: #F5F5F5; 
-  padding: 20px;
+  /*padding: 20px;*/
   color:#383A3F;
 }
 
@@ -159,6 +159,10 @@ p.prayer-by {
 p.prayer{
   font-weight: 400;
   font-size: 1.25rem;
+}
+
+.quote {
+  padding: 20px;
 }
 
 .quote p {
@@ -226,6 +230,10 @@ p.prayer{
 
 .link-social{
   margin-right: 5px;
+}
+
+.faq-content {
+  padding-top: 20px;
 }
 
 .faq-card {
