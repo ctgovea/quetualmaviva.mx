@@ -154,7 +154,6 @@ a:active {
 p.prayer,
 p.prayer-by {
    color: #030303;
-   
 }
 
 p.prayer{
@@ -174,7 +173,6 @@ p.prayer{
 
 .author img{
   width: 65px;
-  border-radius: 100%;
   margin: 0;
   padding: 10px;
   vertical-align: middle;
