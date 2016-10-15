@@ -292,6 +292,7 @@ ul.faq-description{
 }
 
 .welcome-quote {
+  margin-left: 5%;
   width: 60%;
   /*background: lightgreen;*/
   display: flex;
@@ -300,7 +301,7 @@ ul.faq-description{
 }
 
 .welcome-quote p {
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   font-style: italic;
 }
 
@@ -454,10 +455,13 @@ ul.faq-description{
   .program {
     width: 60%;
   }
-
   
   .subheader {
     font-size: 1.25rem;
+  }
+  
+  .welcome-quote {
+    margin-left: 15%;
   }
 }
 
@@ -474,6 +478,11 @@ ul.faq-description{
     max-width: 48%;
     font-size: 1.5rem;
   }
+
+  .welcome-quote {
+    margin-left: 25%;
+  }
+
 }
 
 @media (min-width: 1700px){
