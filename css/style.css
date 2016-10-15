@@ -338,6 +338,10 @@ ul.faq-description{
     font-size: 2.875rem;
   }
 
+  h1.h1-light {
+    font-size: 2.5rem;   
+  }
+
   h2 {
     font-size: 2.125rem;
   }
@@ -423,6 +427,10 @@ ul.faq-description{
 @media (min-width: 1025px){
   h1 {
     font-size: 3rem;
+  }
+
+  h1.h1-light {
+    font-size: 2.625rem;   
   }
 
   .container {
