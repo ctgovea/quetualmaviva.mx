@@ -301,7 +301,7 @@ ul.faq-description{
 }
 
 .welcome-quote p {
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   font-style: italic;
 }
 
@@ -423,6 +423,9 @@ ul.faq-description{
     font-size: 1.125rem;
   }
 
+  .welcome-quote p {
+    font-size: 1.25rem;
+  }
 }
 
 @media (min-width: 1025px){
