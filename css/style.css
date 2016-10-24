@@ -289,10 +289,10 @@ ul.faq-description{
 .welcome{
   padding-bottom: 0px;
   display: flex;
+  margin: 0 auto;
 }
 
 .welcome-quote {
-  margin-left: 5%;
   width: 60%;
   /*background: lightgreen;*/
   display: flex;
@@ -319,7 +319,7 @@ ul.faq-description{
 
 .welcome-img {
   width: 40%;
-  /*background: lightskyblue;*/  
+  /*background: lightskyblue;  */
 }
 
 .welcome-img img {
@@ -333,6 +333,12 @@ ul.faq-description{
 /* ======================================= 
    Media Queries  
 ==========================================*/
+@media (min-width: 460px) {
+  .bishop {
+    padding-top: 40px;
+  }
+}
+
 
 @media (min-width: 769px) {
   h1 {
@@ -423,9 +429,18 @@ ul.faq-description{
     font-size: 1.125rem;
   }
 
+  .welcome-quote {
+    padding: 20px 20px 0;
+  }
+
   .welcome-quote p {
     font-size: 1.25rem;
   }
+
+  .bishop {
+    padding-top: 60px;
+  }
+
 }
 
 @media (min-width: 1025px){
@@ -463,9 +478,10 @@ ul.faq-description{
     font-size: 1.25rem;
   }
   
-  .welcome-quote {
-    margin-left: 15%;
+  .welcome {
+    width: 75%;
   }
+  
 }
 
 @media (min-width: 1400px){
@@ -481,11 +497,6 @@ ul.faq-description{
     max-width: 48%;
     font-size: 1.5rem;
   }
-
-  .welcome-quote {
-    margin-left: 25%;
-  }
-
 }
 
 @media (min-width: 1700px){
