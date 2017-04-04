@@ -22,7 +22,7 @@
 		</div>
 	</header>
 	<div class="main-content">
-		<h2 class="centered invitation">La Parroquia de Nuestra Señora de la Merced invita</h2>
+		<h2 class="centered invitation">La Parroquia de N.S. del Perpetuo Socorro invita</h2>
 		<div class="container intro centered">
 			A un fin de semana donde juntos reflexionamos más a fondo sobre las enfermedades espirituales y la terapéutica o remedios
 			que señalan los Padres de la Iglesia apuntando a Cristo como el Médico.
@@ -197,7 +197,7 @@
 								<li>Artículos de higiene personal (jabón, shampoo)</li>
 								<li>Un abrigo ligero (en las noches puede hacer frío)</li>
 							</ul>
-							<p class="faq-description">En los cuartos hay dos camas individuales con almohada y cobija.</p>
+							<p class="faq-description">En los cuartos hay dos camas individuales con almohada y cobija y un baño privado.</p>
 						</div>
 						<div class="faq-card ">
 							<h3 class="faq-title">¿Qué buscamos?</h3>
@@ -217,8 +217,34 @@
 								en su Parroquia para “sanar las heridas que nos ha hecho el mundo” y para ser fermento de comunión.</p>
 						</div>
 					</div>
-
 				</div>
+			</div>
+		</div>
+		<div class="background-light clearfix">
+			<div class="container clearfix">
+				<h2 class="centered">Aparta tu lugar</h2>
+				<form id="registerForm" action="register.php" method="post">
+					<p>
+						<label for="name">Nombre*</label>
+						<input id="name" name="name" type="text" required placeholder="Escribe tu nombre">
+					</p>
+					<p>
+						<label for="email">Email*</label>
+						<input id="email" name="email" type="email" required placeholder="email@ejemplo.com">
+					</p>
+					<p>
+						<label for="phone">Celular</label>
+						<input id="phone" name="phone" type="tel" placeholder="¿Algún número al que te podamos hablar? (opcional)">
+					</p>
+					<p>
+						<label for="comments">Comentarios</label>
+						<input id="comments" name="comments" rows="3" type="textarea">
+					</p>
+					<p id="formStatusMessage" class="form-status"></p>
+					<p>
+						<input type="submit" value="Enviar" id="submit">
+					</p>
+				</form>
 			</div>
 		</div>
 		<div class="group-photo-background"> </div>
@@ -232,6 +258,9 @@
 		</a>
 		<p></p>
 	</footer>
+	<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js"></script>
+	<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/jquery.validate.min.js"></script>
+	<script src="scripts\registerForm.js"></script>
 </body>
 
 </html>
