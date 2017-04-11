@@ -261,6 +261,7 @@ h2.invitation {
      url('../img/capilla.jpg') no-repeat center;
   background-size: cover;
   height: 350px;
+  margin-top: 20px;
 }
 
 p.prayer,
