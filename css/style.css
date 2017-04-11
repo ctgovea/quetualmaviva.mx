@@ -257,8 +257,8 @@ h2.invitation {
 }
 
 .prayer-background{
-  background: linear-gradient(0deg, rgba(255,255,255,0.4), transparent ), 
-     url('../img/bricks-lights.jpg') no-repeat center;
+  background: linear-gradient(0deg, rgba(255,255,255,0.2), transparent ), 
+     url('../img/capilla.jpg') no-repeat center;
   background-size: cover;
   height: 350px;
 }
@@ -607,6 +607,11 @@ ul.faq-description{
   h1{
     font-size: 350%;
   }
+
+  .prayer-background{
+    height: 400px;
+  }
+
 }
 
 
