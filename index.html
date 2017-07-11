@@ -17,8 +17,13 @@
 		<h1>Terapéutica de las Enfermedades Espirituales</h1>
 		<h4>8-10 Septiembre 2017</h4>
 		<h4>Suchitlán, Colima</h4>
-
 	</header>
+	<!--<div class="signup">
+		<form id="signup-form" action="" method="post">
+			<input id="signup-email" type="email" placeholder="tu correo electrónico">
+			<input type="submit" value="Enviar" id="signup-button">
+		</form>
+	</div>-->
 	<div class="main-content">
 		<h2 class="centered invitation">La Parroquia de N.S. del Perpetuo Socorro invita</h2>
 		<div class="container intro centered">
@@ -148,6 +153,15 @@
 				</div>
 			</div>
 		</div>
+		<div class="signup-section">
+			<div class="container clearfix">
+				<h2 class="centered">Recibe noticias en tu correo</h2>
+				<form id="signupForm" class="inline-form" action="signup.php" method="post">
+					<input type="email" id="emailSignup" placeholder="tucorreo@ejemplo.com">
+					<input type="submit" value="Enviar" id="submitSignup">
+				</form>
+			</div>
+		</div>
 		<div class="background-light clearfix">
 			<div class="container clearfix">
 				<h2 class="centered">Preguntas frecuentes</h2>
@@ -156,9 +170,10 @@
 						<div class="faq-card ">
 							<h3 class="faq-title">¿Quién organiza?</h3>
 							<p class="faq-description">Un grupo de aproximadamente 15 personas, principalmente jóvenes, que se reúnen los viernes en la noche para hacer
-								oración en la Parroquia de Nuestra Señora del Perpetuo Socorro, en Colima, México, bajo la dirección de nuestro párroco.
+								oración en la Parroquia de Nuestra Señora del Perpetuo Socorro, en Colima, México, bajo la dirección del párroco
+								y con permiso del Obispo.
 							</p>
-							<p class="faq-description">En el fin de semana del retiro apoyan también sacerdotes de la Diócesis de Colima.</p>
+							<p class="faq-description"> Apoyan también sacerdotes de la Diócesis de Colima.</p>
 						</div>
 						<div class="faq-card ">
 							<h3 class="faq-title">¿Cuánto dura el retiro?</h3>
@@ -166,15 +181,16 @@
 						</div>
 						<div class="faq-card ">
 							<h3 class="faq-title">¿Cuál es el costo?</h3>
-							<p class="faq-description">La contribución personal es de 500 a 700 pesos. A partir de 500 usted ayuda a que asistan personas con menos recursos
-								económicos.
+							<p class="faq-description">La contribución personal es de 750 a 950 pesos según las posibilidades de cada quien. A partir de 750 usted ayuda
+								a que asistan personas con menos recursos económicos.
 							</p>
 							<p class="faq-description">Con esto se cubre hospedaje por persona en habitación doble (2 camas individuales) con baño, los alimentos de la cena
 								del viernes a la comida del domingo.</p>
 						</div>
 						<div class="faq-card ">
 							<h3 class="faq-title">¿Tendré que hablar en público?</h3>
-							<p class="faq-description">No. </p>
+							<p class="faq-description">No. El retiro es un curso informativo en el que no hay terapias ni personales ni de grupo. Sin embargo, las personas
+								que espontáneamente deseen hacer preguntas o compartir algo breve lo pueden hacer.</p>
 						</div>
 						<div class="faq-card ">
 							<h3 class="faq-title">¿A quién va dirigido?</h3>
@@ -204,27 +220,37 @@
 							<h3 class="faq-title">¿Qué buscamos?</h3>
 							<p class="faq-description">Una oportunidad para:</p>
 							<ul class="faq-description">
-								<li>Salir del aislamiento</li>
 								<li>Despertar al misterio de Dios</li>
 								<li>Solidarizarse con el sufrimiento humano</li>
 								<li>Celebrar las fuentes de la fe</li>
 							</ul>
 						</div>
 						<div class="faq-card ">
-							<h3 class="faq-title">¿Qué
-								<u>no</u> buscamos?</h3>
-							<p class="faq-description">No queremos dirigir a nadie a una iniciativa particular de la Iglesia. Nadie se hace miembro en ningún sentido. Al
-								final del retiro se hace la invitación a los participantes a que busquen a su párroco y encuentren con él un lugar
-								en su Parroquia para “sanar las heridas que nos ha hecho el mundo” y para ser fermento de comunión.</p>
+							<h3 class="faq-title">¿Este retiro forma parte de algún movimiento?</h3>
+							<p class="faq-description">
+								No. El retiro lo organiza un grupo de oracion parroquial. Participan personas que ya participan en algún movimiento de la
+								Iglesia y quienes buscan simplemente una curación interior. El participante no se integra a un grupo. No buscamos
+								dirigir a las personas a una sola iniciativa de la Iglesia. Al terminar se invita a que las personas busquen a su
+								párroco y encuentren en la Iglesia un lugar para "sanar las heridas que nos ha hecho el mundo" y para ser fermento
+								de comunión...
+							</p>
+						</div>
+						<div class="faq-card ">
+							<h3 class="faq-title">¿Cuándo fue el primer retiro?</h3>
+							<p class="faq-description">El primer retiro se realizó del 10 al 12 de octubre del 2008. Participaron 93 personas. En esa fecha conmemoramos
+								un año de la participación de 8 muchachos del grupo en un encuntro latinoamericano de jóvenes en Cochabamba, Bolivia,
+								organizado por la comunidad de Taizé. Se han hecho, desde entonces, 19 retiros con la participación de más de 700
+								personas.
+							</p>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="background-light clearfix">
+		<div class="background-dark clearfix">
 			<div class="container clearfix">
 				<h2 class="centered">Aparta tu lugar</h2>
-				<form id="registerForm" action="register.php" method="post">
+				<form id="registerForm" class="splash-form" action="register.php" method="post">
 					<p>
 						<label for="name">Nombre*</label>
 						<input id="name" name="name" type="text" required placeholder="Escribe tu nombre">

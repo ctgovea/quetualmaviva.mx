@@ -59,56 +59,57 @@ p {
    Form styles 
 ==========================================*/
 
-form {
+form.splash-form {
   background: #fff;
   padding: 2em 0.8em 2em;
   
   border-radius: 5px;
 }
 
-form label.error {
+form.splash-form label.error {
   color: #f22432;
   font-size: 0.98em;
   padding-top: 5px;
   padding-left: 7px;
 }
 
-form input.error {
+form.splash-form input.error {
   border: 1px solid #f22432;
 }
 
-label {
+.splash-form label {
   display: block;
   font-size: 1.25em;
   margin: 0 0 .5em;
   color: #333;
 }
 
-input {
+.splash-form input {
   display: block;
   box-sizing: border-box;
   width: 100%;
   outline: none
 }
 
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-input[type="textarea"] {
+.splash-form input[type="text"],
+.splash-form input[type="email"],
+.splash-form input[type="tel"],
+.splash-form input[type="textarea"] {
   background: #f5f5f5;
   border: 1px solid #e5e5e5;
   font-size: 1.125em;
   padding: .7em .6em;
   border-radius: 5px;
 }
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="tel"],
-input[type="textarea"]:focus {
+
+.splash-form input[type="text"]:focus,
+.splash-form input[type="email"]:focus,
+.splash-form input[type="tel"],
+.splash-form input[type="textarea"]:focus {
   background: #fff;
 }
 
-input[type="submit"] {
+.splash-form input[type="submit"] {
   background: #2F558E;
   box-shadow: 0 3px 0 0 #1D3C6A;
   border-radius: 5px;
@@ -124,11 +125,11 @@ input[type="submit"] {
   text-shadow: 0 1px #68B25B;
 }
 
-input[type="submit"]:hover {
+.splash-form input[type="submit"]:hover {
   background: #134693;
 }
 
-form p.form-status {
+form.splash-form  p.form-status {
     font-size: 1.25em;
     text-align: center;
     padding: 13px;
@@ -136,13 +137,13 @@ form p.form-status {
     display: none;
 }
 
-form p.form-status{
+form.splash-form  p.form-status{
     background-color: #DFF2BF;
     border-color: 1px solid #4F8A10;
     font-weight: bold;
 }
 
-form p.form-status.error{
+form.splash-form  p.form-status.error{
     border-color: 1px solid #D8000C;
     background-color: #FFBABA;
 }
@@ -242,6 +243,11 @@ h2.invitation {
 .background-light {
   background-color: #F5F5F5; 
   color:#383A3F;
+}
+
+.background-dark{
+  background-color: #666A73;
+  color: #F5F5F5; 
 }
 
 .main-header .container {
@@ -344,6 +350,48 @@ p.prayer{
 .link-social{
   margin-right: 5px;
 }
+
+/* Signup  
+-------------------------------------*/
+.signup-section {
+  background: white;
+  margin-top: 20px;
+  padding: 50px 0px 50px;
+  text-align: center;
+}
+
+.inline-form {
+  width: 100%;
+  margin: 30px auto 0;
+  text-align: center;
+  display: flex;
+}
+
+.inline-form input[type="email"] {
+  background: #fff;
+  border: 0px;
+  border-bottom: 1px solid #e5e5e5;
+  font-size: 1.125em;
+  padding: .7em .6em;
+  width: 100%;
+  flex: 1;
+}
+
+.inline-form input[type="submit"] {
+  background: #19cf86;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 5px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.inline-form input[type="submit"]:hover {
+  opacity: 0.8;
+}
+
 
 /* FAQ  
 -------------------------------------*/
@@ -539,11 +587,15 @@ ul.faq-description{
     padding-top: 60px;
   }
 
-  form{
+  form.splash-form {
     padding: 2em 3.5em 2em;
     max-width: 550px;
     margin: 50px auto 60px;
     box-shadow: 0 0 1em #222;
+  }
+
+  .inline-form {
+    width: 70%;
   }
 
 }
@@ -586,6 +638,10 @@ ul.faq-description{
   .welcome {
     width: 75%;
   }
+
+  .inline-form {
+    width: 60%;
+  }
   
 }
 
@@ -601,6 +657,10 @@ ul.faq-description{
   .intro {
     max-width: 48%;
     font-size: 1.5rem;
+  }
+
+  .inline-form {
+    width: 50%;
   }
 }
 
