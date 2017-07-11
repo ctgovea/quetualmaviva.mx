@@ -5,6 +5,7 @@
 <head>
 	<title>¡Levántate, que tu alma viva!</title>
 	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
@@ -18,12 +19,6 @@
 		<h4>8-10 Septiembre 2017</h4>
 		<h4>Suchitlán, Colima</h4>
 	</header>
-	<!--<div class="signup">
-		<form id="signup-form" action="" method="post">
-			<input id="signup-email" type="email" placeholder="tu correo electrónico">
-			<input type="submit" value="Enviar" id="signup-button">
-		</form>
-	</div>-->
 	<div class="main-content">
 		<h2 class="centered invitation">La Parroquia de N.S. del Perpetuo Socorro invita</h2>
 		<div class="container intro centered">
@@ -155,11 +150,16 @@
 		</div>
 		<div class="signup-section">
 			<div class="container clearfix">
-				<h2 class="centered">Recibe noticias en tu correo</h2>
+				<h2 class="centered">
+					</i>Recibe noticias en tu email</h2>
 				<form id="signupForm" class="inline-form" action="signup.php" method="post">
-					<input type="email" id="emailSignup" placeholder="tucorreo@ejemplo.com">
-					<input type="submit" value="Enviar" id="submitSignup">
+					<i class="fa fa-envelope-o fa-2x" aria-hidden="true" style="padding-top:11px;padding-right: 5px;"></i>
+					<input type="email" id="emailSignup" placeholder="micorreo@ejemplo.com">
+					<button type="submit">
+						<i class="fa fa-paper-plane" aria-hidden="true"></i>
+					</button>
 				</form>
+				<p class="smallprint">No enviamos spam y puedes cancelar en cualquier momento.</p>
 			</div>
 		</div>
 		<div class="background-light clearfix">

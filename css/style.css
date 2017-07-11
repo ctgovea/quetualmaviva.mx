@@ -246,7 +246,7 @@ h2.invitation {
 }
 
 .background-dark{
-  background-color: #666A73;
+  background-color: #f1f3f5;
   color: #F5F5F5; 
 }
 
@@ -375,10 +375,12 @@ p.prayer{
   padding: .7em .6em;
   width: 100%;
   flex: 1;
+  outline-width: 0;
 }
 
-.inline-form input[type="submit"] {
+.inline-form button[type="submit"] {
   background: #19cf86;
+  padding: 0 15px 0;
   border-top-left-radius: 0px;
   border-top-right-radius: 5px;
   border-bottom-left-radius: 0px;
@@ -388,7 +390,7 @@ p.prayer{
   cursor: pointer;
 }
 
-.inline-form input[type="submit"]:hover {
+.inline-form button[type="submit"]:hover {
   opacity: 0.8;
 }
 
@@ -590,7 +592,7 @@ ul.faq-description{
   form.splash-form {
     padding: 2em 3.5em 2em;
     max-width: 550px;
-    margin: 50px auto 60px;
+    margin: 30px auto 60px;
     box-shadow: 0 0 1em #222;
   }
 
