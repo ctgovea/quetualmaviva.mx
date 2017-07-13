@@ -187,15 +187,22 @@ form.splash-form  p.form-status.error{
   padding-bottom: 0;
 }
 
-
+.striped-border{
+  border: 5px solid transparent;
+  -o-border-image: url(../img/stripes.png) 9 round;  
+  -webkit-border-image: url(../img/stripes.png) 9 round; 
+  border-image: url(../img/stripes.png) 9 round;     
+  width: 98%;
+}
+/*
 .striped-border {
   position: relative;
   display: inline-block;
   width: 98%;
 }
 
-.striped-border:after {
-    content: '';
+.striped-border::after {
+    content: "";
     position: absolute;
     left: 0;
     top: 0;
@@ -208,7 +215,7 @@ form.splash-form  p.form-status.error{
     transform: translate(-5px, -5px);
     opacity: 0.4;
 }
-
+*/
 .o-4 {
   opacity: 0.4;
 }
@@ -378,12 +385,6 @@ p.prayer{
 
 /* Signup  
 -------------------------------------*/
-.signup-section {
-  background: white;
-  margin-top: 20px;
-  padding: 50px 0px 50px;
-  text-align: center;
-}
 
 .inline-form {
   width: 100%;
@@ -691,7 +692,7 @@ ul.faq-description{
   }
 
   .striped-border {
-    width: 50%;
+    width: 45%;
   }
 
   .inline-form {
