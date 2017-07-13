@@ -187,6 +187,14 @@ form.splash-form  p.form-status.error{
   padding-bottom: 0;
 }
 
+.success {
+  color: #4F8A10;
+}
+
+.error {
+  color: #D8000C;
+}
+
 .striped-border{
   border: 5px solid transparent;
   -o-border-image: url(../img/stripes.png) 9 round;  

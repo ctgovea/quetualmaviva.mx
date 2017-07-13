@@ -76,10 +76,10 @@
 		</div>
 		<div class="centered" style="margin-top:10px; padding-top: 0px; padding-bottom: 70px;">
 			<div class="container striped-border" style="padding-top:30px; padding-bottom:45px">
-				<h2 class="centered" style="padding:0px">Recibe noticias en tu email</h2>
+				<h2 id="signupMsg" style="padding:0px">Recibe noticias en tu email</h2>
 				<form id="signupForm" class="inline-form" action="signup.php" method="post">
 					<i class="fa fa-envelope-o fa-2x o-4" aria-hidden="true" style="padding-top:11px;padding-right: 5px;"></i>
-					<input type="email" id="emailSignup" placeholder="micorreo@ejemplo.com">
+					<input type="email" id="emailSignup" required placeholder="micorreo@ejemplo.com">
 					<button type="submit">
 							<i class="fa fa-paper-plane" aria-hidden="true"></i>
 						</button>
@@ -285,6 +285,7 @@
 	</footer>
 	<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js"></script>
 	<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/jquery.validate.min.js"></script>
+	<script src="scripts\signup.js"></script>
 	<script src="scripts\registerForm.js"></script>
 </body>
 
