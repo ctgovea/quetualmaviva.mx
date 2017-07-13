@@ -191,8 +191,8 @@ form.splash-form  p.form-status.error{
 .striped-border {
   position: relative;
   display: inline-block;
+  width: 98%;
 }
-
 
 .striped-border:after {
     content: '';
@@ -622,7 +622,11 @@ ul.faq-description{
   }
 
   .inline-form {
-    width: 70%;
+    width: 80%;
+  }
+
+  .striped-border {
+    width: 80%;
   }
 
 }
@@ -666,10 +670,10 @@ ul.faq-description{
     width: 75%;
   }
 
-  .inline-form {
+  .striped-border {
     width: 60%;
   }
-  
+
 }
 
 @media (min-width: 1400px){
@@ -686,8 +690,12 @@ ul.faq-description{
     font-size: 1.5rem;
   }
 
-  .inline-form {
+  .striped-border {
     width: 50%;
+  }
+
+  .inline-form {
+    width: 80%;
   }
 }
 
