@@ -188,6 +188,31 @@ form.splash-form  p.form-status.error{
 }
 
 
+.striped-border {
+  position: relative;
+  display: inline-block;
+}
+
+
+.striped-border:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border: 5px solid transparent;
+    -o-border-image: url(../img/stripes.png) 9 round;  
+    -webkit-border-image: url(../img/stripes.png) 9 round; 
+    border-image: url(../img/stripes.png) 9 round;     
+    transform: translate(-5px, -5px);
+    opacity: 0.4;
+}
+
+.o-4 {
+  opacity: 0.4;
+}
+
 /* ======================================= 
    Pseudo-classes 
 ==========================================*/
