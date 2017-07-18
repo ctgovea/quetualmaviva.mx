@@ -7,8 +7,8 @@
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/style.css">
-	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300">
 	<meta name="viewport" content="width=device-width">
 </head>
 
@@ -19,7 +19,7 @@
 		<h4>8-10 Septiembre 2017</h4>
 		<h4>Suchitlán, Colima</h4>
 	</header>
-	<div class="main-content">
+	<div class="main-content galleria">
 		<h2 class="centered invitation">La Parroquia de N.S. del Perpetuo Socorro invita</h2>
 		<div class="container intro centered">
 			A un fin de semana donde juntos reflexionamos más a fondo sobre las enfermedades espirituales y la terapéutica o remedios
@@ -34,19 +34,19 @@
 			<div class="clearfix">
 				<div class="primary-30 col">
 					<h3>Pláticas</h3>
-					<img class="feat-image" src="img\platica.jpg">
+					<a href="img\platica.jpg"><img class="feat-image" data-title="Pláticas y exposiciones" data-description="Exposiciones y pláticas presentando los temas" src="img\platica.jpg"></a>
 					<p>Durante el fin de semana se tienen pláticas presentando los temas, representaciones, pequeñas obras de teatro y momentos
 						para compartir en pequeños grupos.</p>
 				</div>
 				<div class="secondary-30 col">
 					<h3>Oración común</h3>
-					<img class="feat-image" src="img\oracion.jpg">
+					<a href="img\oracion.jpg"><img class="feat-image" data-title="Oración de la luz" data-description="Oración con cantos de Taizé" src="img\oracion.jpg"></a>
 					<p>El viernes y sábado por la noche se hace una oración con cantos de Taizé. El viernes se reza en torno al icono de la
 						cruz. El sábado por la noche una oración que celebra la luz de Cristo Resucitado.</p>
 				</div>
 				<div class="tertiary-30 col">
 					<h3>Eucaristía y Sacramentos </h3>
-					<img class="feat-image" src="img\eucaristia.jpg">
+					<a href="img\eucaristia.jpg"><img class="feat-image" data-title="Eucaristía" data-description="Eucaristía en la capilla de la casa San José en Suchitlán, Colima." src="img\eucaristia.jpg"></a>
 					<p>Es posible para aquellos que deseen de acercarse al sacramento de la Reconciliación. El domingo se celebra la Eucaristía.</p>
 				</div>
 			</div>
@@ -144,7 +144,6 @@
 					<li>Salud reencontrada: la impasibilidad, la caridad y el conocimiento de Dios</li>
 				</ul>
 			</div>
-
 		</div>
 		<div class="container clearfix">
 			<div class="welcome">
@@ -197,7 +196,6 @@
 								de algún familiar adulto, de preferencia sus padres.</p>
 						</div>
 					</div>
-
 					<div class="secondary col">
 						<div class="faq-card ">
 							<h3 class="faq-title">¿Dónde es?</h3>
@@ -285,8 +283,15 @@
 	</footer>
 	<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js"></script>
 	<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/jquery.validate.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/galleria/1.5.7/galleria.min.js"></script>
 	<script src="scripts\signup.js"></script>
 	<script src="scripts\registerForm.js"></script>
+	<script>
+		(function () {
+			// Galleria.loadTheme('https://cdnjs.cloudflare.com/ajax/libs/galleria/1.5.7/themes/classic/galleria.classic.min.js');
+			// Galleria.run('.galleria');
+		})();
+	</script>
 </body>
 
 </html>
