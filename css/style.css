@@ -89,7 +89,6 @@ hr {
 form.splash-form {
   background: #fff;
   padding: 2em 0.8em 2em;
-  
   border-radius: 5px;
 }
 
@@ -109,6 +108,7 @@ form.splash-form input.error {
   font-size: 1.25em;
   margin: 0 0 .5em;
   color: #333;
+  text-align: left;
 }
 
 .splash-form input {
@@ -653,6 +653,14 @@ ul.faq-description{
 
   .striped-border {
     width: 80%;
+  }
+
+}
+
+@media (min-width: 992px){
+  .pull-right-lg-7 {
+    float: right;
+    text-align: right;
   }
 
 }
