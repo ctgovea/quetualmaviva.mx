@@ -74,13 +74,12 @@ hr {
     content: '';
     position: absolute;
     display: block;
-    top: 45%;
-    left: -1000px;
-    right: -1000px;
+    top: 40%;
+    left: 0px;
+    right: 0px;
     height: 1px;
     background-color: #dcdfe4;
 }
-
 
 /* ======================================= 
    Form styles 
@@ -215,14 +214,6 @@ form.splash-form  p.form-status.error{
   color: #D8000C;
 }
 
-.striped-border{
-  border: 5px solid transparent;
-  -o-border-image: url(../img/stripes.png) 9 round;  
-  -webkit-border-image: url(../img/stripes.png) 9 round; 
-  border-image: url(../img/stripes.png) 9 round;     
-  width: 98%;
-}
-
 .o-4 {
   opacity: 0.4;
 }
@@ -309,15 +300,15 @@ a:active {
   margin-top: 20px;
 }
 
-p.prayer,
+/*p.prayer,
 p.prayer-by {
    color: #030303;
-}
-
+}*/
+/*
 p.prayer{
   font-weight: 400;
   font-size: 1.25rem;
-}
+}*/
 
 .quote {
   padding: 20px;
@@ -329,30 +320,29 @@ p.prayer{
   margin: 0;
 }
 
-.author{
+.quote-by{
   margin-top: 20px;
 }
 
-.author img{
+.quote-by img{
   width: 65px;
   margin: 0;
   padding: 10px;
   vertical-align: middle;
 }
 
-.author p {
+.quote-by p {
   font-weight: bold;
   font-size: 1.1rem;
   padding: 0px;
   margin: 0;
-  display: inline-block;
 }
 
-.author p.more-info  {
+.quote-by p.more-info  {
   font-weight: normal;
+  font-style: normal;
   font-size: 1rem;
-  color: #383A3F;
-  padding: 3px;
+  color: #8D8D8D;
   margin: 0;
 }
 
@@ -470,7 +460,7 @@ p.prayer{
 
 .faq-title {
   line-height: 1.5;
-  margin: 0 0 10px;
+  margin: 0 0 15px;
 }
 
 .faq-description {
@@ -510,9 +500,8 @@ ul.faq-description{
   font-style: italic;
 }
 
-.welcome-quote-by {
+/*.welcome-quote-by {
   bottom: 0;
-  /*background: lightsalmon;*/
   margin-top: auto;
   text-align: right;
 }
@@ -520,7 +509,7 @@ ul.faq-description{
 .welcome-quote-by p {
   font-size: 1rem;
   font-style: normal;
-}
+}*/
 
 .welcome-img {
   width: 40%;
@@ -578,9 +567,8 @@ ul.faq-description{
     max-width: 1000px;
   }
 
-  .quote p,
-  p.prayer{
-    font-size: 1.325rem;
+  .quote p {
+    font-size: 1.25rem;
   }
 
   .col {
@@ -651,10 +639,6 @@ ul.faq-description{
     box-shadow: 0 0 1em #222;
   }
 
-  .striped-border {
-    width: 80%;
-  }
-
 }
 
 @media (min-width: 992px){
@@ -679,9 +663,8 @@ ul.faq-description{
     margin-bottom: 30px;
   }
 
-  .quote p,
-  p.prayer{
-    font-size: 1.5rem;
+  .quote p {
+    font-size: 1.4rem;
   }
 
   .intro {
@@ -704,10 +687,6 @@ ul.faq-description{
     width: 75%;
   }
 
-  .striped-border {
-    width: 60%;
-  }
-
 }
 
 @media (min-width: 1400px){
@@ -722,10 +701,6 @@ ul.faq-description{
   .intro {
     max-width: 48%;
     font-size: 1.5rem;
-  }
-
-  .striped-border {
-    width: 45%;
   }
 
 }
