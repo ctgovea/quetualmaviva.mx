@@ -30,7 +30,7 @@ h3 {
 
 h2 {
   font-size: 1.625rem;
-  padding-bottom: 3rem;
+  padding-bottom: 2.75rem;
 }
 
 h3 {
@@ -43,14 +43,44 @@ img {
   margin-bottom: 20px;
 }
 
+
+/* ======================================= 
+   Layout Styles  
+==========================================*/
+
+.featurette {
+  margin: 3.25rem  0;
+}
+
+.divider {
+  border-top: 1px solid #eee;
+}
+
+hr {
+  height: 0;
+  border: 0;
+}
+
 .row-padded {
     padding-top: 50px;
     padding-bottom: 50px;
 }
 
-.row-bordered {
-  border-top: 1px solid #eee;
+.row-backbordered {
+  position: relative;
 }
+
+.row-backbordered:before {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 45%;
+    left: -1000px;
+    right: -1000px;
+    height: 1px;
+    background-color: #dcdfe4;
+}
+
 
 /* ======================================= 
    Form styles 
@@ -169,14 +199,6 @@ form.splash-form  p.form-status.error{
   font-style: italic;
 }
 
-.no-margin-top {
-  margin-top: 0;
-}
-
-.no-margin-bottom {
-  margin-bottom:0;
-}
-
 .no-padding-bottom {
   padding-bottom: 0;
 }
@@ -231,18 +253,6 @@ a:active {
    Main Styles  
 ==========================================*/
 
-.featurette {
-  margin: 3.25rem  0;
-}
-
-.divider {
-  border-top: 1px solid #eee;
-}
-
-hr {
-  height: 0;
-  border: 0;
-}
 
 .main-header {
   padding-top: 5%; /* 170px; */
@@ -382,13 +392,36 @@ p.prayer{
   border: 1px solid transparent;
   border-radius: 4px;
   border-color: #ddd;
+  background-color: #fff;
+  -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+  box-shadow: 0 1px 1px rgba(0,0,0,.05);
+  overflow: hidden;
+}
+
+.panel-floating {
   box-shadow: 0 2px 15px rgba(0,0,0,.1);
   border-top: 5px solid #19cf86;/*#68B25B; *//*#21627c;*/
+  overflow: hidden;
+}
+
+.panel-floating-inline .panel-body{
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+
+.panel-body:after {
+  clear: both;
 }
 
 .inline-form {
   width: 100%;
-  margin: 30px auto 0;
   text-align: center;
   display: flex;
 }
@@ -618,10 +651,6 @@ ul.faq-description{
     box-shadow: 0 0 1em #222;
   }
 
-  .inline-form {
-    width: 80%;
-  }
-
   .striped-border {
     width: 80%;
   }
@@ -691,9 +720,6 @@ ul.faq-description{
     width: 45%;
   }
 
-  .inline-form {
-    width: 80%;
-  }
 }
 
 @media (min-width: 1600px){
