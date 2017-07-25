@@ -40,7 +40,6 @@ h3 {
 
 img {
   max-width: 100%;
-  margin-bottom: 20px;
 }
 
 
@@ -300,16 +299,6 @@ a:active {
   margin-top: 20px;
 }
 
-/*p.prayer,
-p.prayer-by {
-   color: #030303;
-}*/
-/*
-p.prayer{
-  font-weight: 400;
-  font-size: 1.25rem;
-}*/
-
 .quote {
   padding: 20px;
 }
@@ -353,7 +342,7 @@ p.prayer{
 }
 
 .main-footer {
-  background-color: #171717;
+  background-color: #f7f7f7;
   border-top: 1px solid #D2D2D2;
   color: #9DA2A6;
   padding-top: 20px;
@@ -373,6 +362,20 @@ p.prayer{
 
 .link-social{
   margin-right: 5px;
+}
+
+/* Carousel  
+-------------------------------------*/
+.demo ul{
+  list-style: none outside none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.content-slider li{
+    background-color: #ed3020;
+    text-align: center;
+    color: #FFF;
 }
 
 /* Signup  
