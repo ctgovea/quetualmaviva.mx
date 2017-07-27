@@ -340,9 +340,9 @@ a:active {
   background-color: #f7f7f7;
   border-top: 1px solid #D2D2D2;
   color: #9DA2A6;
-  padding-top: 20px;
-  padding-bottom: 20px;  
-  height: 100px;
+  padding-top: 50px;
+  padding-bottom: 50px;  
+  height: 150px;
 }
 
 .book-cover {
@@ -355,9 +355,36 @@ a:active {
   line-height: 1.625em;
 }
 
-.link-social{
-  margin-right: 5px;
+.list-inline {
+  list-style: none;
 }
+
+.list-inline li {
+  margin: 0 10px;
+}
+
+.list-inline-item {
+  display: inline-block;
+}
+
+ul.list-inline li a {
+  display: block;
+  height: 50px;
+  width: 50px;
+  line-height: 50px;
+  font-size: 25px;
+  border-radius: 100%;
+  color: white;
+}
+
+ul.list-inline li.social-facebook a {
+  background-color: #3b5998;
+}
+
+ul.list-inline li.social-twitter a {
+  background-color: #1da1f2;
+}
+
 
 /* Carousel  
 -------------------------------------*/
