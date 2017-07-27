@@ -271,12 +271,7 @@ a:active {
 }
 
 .background-dark{
-  background-color: #21627c; /* #f1f3f5;*/
-  color: #F5F5F5; 
-}
-
-.background-dark h2 {
-  color: white;
+  background-color: #cbeafb; 
 }
 
 .main-header .container {
@@ -381,6 +376,21 @@ a:active {
 /* Signup  
 -------------------------------------*/
 
+.subscribe-form {
+  padding: 1vw 7vw 1.8vw;
+}
+
+.subscribe-form h2{
+  font-weight: 600;
+}
+
+
+.subscribe-form form {
+  max-width: 460px;
+  justify-content: center;
+  margin: 0 auto;
+}
+
 .panel {
   border: 1px solid transparent;
   border-radius: 4px;
@@ -406,11 +416,6 @@ a:active {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-}
-
-
-.panel-body:after {
-  clear: both;
 }
 
 .inline-form {
