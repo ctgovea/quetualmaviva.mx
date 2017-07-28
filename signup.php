@@ -3,7 +3,7 @@
   {
     $to = "ctgovea@gmail.com";
     $subject = "Que tu alma viva - Suscripcion";
-    $email_field = $_POST['email'];
+    $email_field = $_POST['emailSignup'];
     $headers = "Reply-to: " .  $email_field . "\r\n";
     
     $body = "E-Mail: " . $email_field ;
