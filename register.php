@@ -1,7 +1,7 @@
 <?php
   try
   {
-    $to = "ctgovea@gmail.com";
+    $to = "oracion@quetualmaviva.mx, ctgovea@gmail.com";
     $subject = "Que tu alma viva - Registro";
     $name_field = $_POST['name'];
     $email_field = $_POST['email'];
