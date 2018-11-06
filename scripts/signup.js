@@ -9,7 +9,7 @@ $().ready(function () {
     $submit = $('#signupForm [type="submit"]');
     $submit.prop('disabled', true);
 
-    $msg = $('#signupMsg');
+    const $msg = $('#signupMsg');
 
     const url = $form.attr("action");
     const data = $form.serialize();
@@ -19,7 +19,7 @@ $().ready(function () {
       url: url,
       data: data,
       success: function (response) {
-        $msg.html('<i class="fa fa-check" style="padding-right:5px"></i>¡Listo! Te enviamos un correo.')
+        $msg.html('<i class="fa fa-check" style="padding-right:5px"></i>¡Listo! Te enviaremos un correo.')
           .addClass('success')
           .removeClass('error')
           .slideDown();
