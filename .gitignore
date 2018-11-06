@@ -1,1 +1,4 @@
 .vscode/sftp.json
+error_log
+.ftpquota
+.vscode/settings.json
