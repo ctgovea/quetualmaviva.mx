@@ -18,5 +18,4 @@ $(document).ready(function () {
       $('#image-gallery').removeClass('cS-hidden');
     }
   });
-
 });
