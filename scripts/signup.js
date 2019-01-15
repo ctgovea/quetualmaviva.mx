@@ -24,7 +24,7 @@ $().ready(function () {
       contentType: 'application/json',
       crossDomain: true,
       success: function (response) {
-        $msg.html('<i class="fa fa-check" style="padding-right:5px"></i>¡Listo! Te enviaremos un correo.')
+        $msg.html('<i class="fa fa-check" style="padding-right:5px"></i>¡Listo! Gracias por suscribirte.')
           .addClass('success')
           .removeClass('error')
           .slideDown();
