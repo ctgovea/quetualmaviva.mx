@@ -1,4 +1,5 @@
 $().ready(function () {
+  const subscribe_URL = 'https://eovsmc4uu6.execute-api.us-east-1.amazonaws.com/dev/api/subscribe';
 
   $('#signupForm').submit(function (e) {
     e.preventDefault();
@@ -11,13 +12,17 @@ $().ready(function () {
 
     const $msg = $('#signupMsg');
 
-    const url = $form.attr("action");
-    const data = $form.serialize();
+    const email = document.getElementById('emailSignup').value;
+    var data = JSON.stringify({
+      email
+    });
 
     $.ajax({
       type: 'POST',
-      url: url,
+      url: subscribe_URL,
       data: data,
+      contentType: 'application/json',
+      crossDomain: true,
       success: function (response) {
         $msg.html('<i class="fa fa-check" style="padding-right:5px"></i>¡Listo! Te enviaremos un correo.')
           .addClass('success')
