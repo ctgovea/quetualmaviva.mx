@@ -108,11 +108,4 @@ exports.handler = function (event, context, callback) {
             console.error(err, err.stack);
             context.done(null, "Failed");
         });
-
-    // ses.sendEmail(paramsAdminEmail, function(err, data) {
-    //     // an error occurred
-    //     if (err) console.log(err, err.stack); 
-    //     // successful response
-    //     else callback(null, data);
-    // }); 
 };
