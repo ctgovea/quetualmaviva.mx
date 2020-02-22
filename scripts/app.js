@@ -82,10 +82,10 @@ $(document).ready(function() {
     let form = $(this);
     if (!form.valid()) return false;
 
-    $submitButton = $("#submit");
+    let $submitButton = $("#submit");
     $submitButton.val("Enviando...");
 
-    $statusMessage = $("#formStatusMessage");
+    let $statusMessage = $("#formStatusMessage");
     $statusMessage.hide();
 
     const name = document.getElementById("name").value;
