@@ -1,10 +1,10 @@
-$(document).ready(function () {
+$(document).ready(function() {
   $("#content-slider").lightSlider({
     loop: true,
     keyPress: true
   });
 
-  $('#image-gallery').lightSlider({
+  $("#image-gallery").lightSlider({
     gallery: true,
     item: 1,
     thumbItem: 9,
@@ -14,78 +14,84 @@ $(document).ready(function () {
     pause: 3000,
     auto: true,
     loop: true,
-    onSliderLoad: function () {
-      $('#image-gallery').removeClass('cS-hidden');
+    onSliderLoad: function() {
+      $("#image-gallery").removeClass("cS-hidden");
     }
   });
 
-  const subscribe_URL = 'https://eovsmc4uu6.execute-api.us-east-1.amazonaws.com/dev/api/subscribe';
-  const register_URL = 'https://eovsmc4uu6.execute-api.us-east-1.amazonaws.com/dev/api/register';
+  const register_URL =
+    "https://eovsmc4uu6.execute-api.us-east-1.amazonaws.com/dev/api/register";
+
+  async function hello(email) {
+    const url = "/.netlify/functions/hello";
+
+    try {
+      const response = await fetch(url);
+      const data = await response.json();
+      return data;
+    } catch (err) {
+      console.log(err);
+    }
+  }
 
   // Signup
 
-  $('#signupForm').submit(function (e) {
+  $("#signupForm").submit(function(e) {
     e.preventDefault();
 
     let $form = $(this);
     if (!$form.valid()) return false;
 
-    $submit = $('#signupForm [type="submit"]');
-    $submit.prop('disabled', true);
+    let $submit = $('#signupForm [type="submit"]');
+    $submit.prop("disabled", true);
 
-    const $msg = $('#signupMsg');
+    const $msg = $("#signupMsg");
+    const email = document.getElementById("emailSignup").value;
 
-    const email = document.getElementById('emailSignup').value;
-    var data = JSON.stringify({
-      email
-    });
+    let response = await hello(email);
 
-    $.ajax({
-      type: 'POST',
-      url: subscribe_URL,
-      data: data,
-      contentType: 'application/json',
-      crossDomain: true,
-      success: function (response) {
-        $msg.html('<i class="fa fa-check" style="padding-right:5px"></i>¡Listo! Gracias por suscribirte.')
-          .addClass('success')
-          .removeClass('error')
-          .slideDown();
-        $form.hide();
-      },
-      error: function (response) {
-        $msg.text(':( algo salió mal. Intenta de nuevo.')
-          .addClass('error')
-          .slideDown();
-        $submit.prop('disabled', false);
-      }
-    });
-  });
-
-  // Registration 
-
-  $('#registerForm').validate({
-    messages: {
-      'name': 'Falta que nos digas tu nombre',
-      'email': 'Escribe un correo electrónico válido',
+    if (response.statusCode === 200) {
+      $msg
+        .html(
+          '<i class="fa fa-check" style="padding-right:5px"></i>¡Listo! Gracias por suscribirte.'
+        )
+        .addClass("success")
+        .removeClass("error")
+        .slideDown();
+      $form.hide();
+    } else {
+      $msg
+        .text(":( algo salió mal. Intenta de nuevo.")
+        .addClass("error")
+        .slideDown();
+      $submit.prop("disabled", false);
     }
   });
 
-  $('#registerForm').submit(function (e) {
+  // Registration
+
+  $("#registerForm").validate({
+    messages: {
+      name: "Falta que nos digas tu nombre",
+      email: "Escribe un correo electrónico válido"
+    }
+  });
+
+  $("#registerForm").submit(function(e) {
     e.preventDefault();
     let form = $(this);
     if (!form.valid()) return false;
 
-    $submitButton = $('#submit');
+    $submitButton = $("#submit");
     $submitButton.val("Enviando...");
 
-    $statusMessage = $('#formStatusMessage');
+    $statusMessage = $("#formStatusMessage");
     $statusMessage.hide();
 
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const phone = document.getElementById('phone').value;
-    const comments = document.getElementById('comments').value;
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const phone = document.getElementById("phone").value;
+    const comments = document.getElementById("comments").value;
 
     var data = JSON.stringify({
       name,
@@ -95,20 +101,18 @@ $(document).ready(function () {
     });
 
     $.ajax({
-      type: 'POST',
+      type: "POST",
       url: register_URL,
       data: data,
-      contentType: 'application/json',
+      contentType: "application/json",
       crossDomain: true,
-      success: function (response) {
+      success: function(response) {
         console.log(response);
-        $statusMessage.text('¡Gracias! Tu registro fue enviado.')
-          .slideDown();
+        $statusMessage.text("¡Gracias! Tu registro fue enviado.").slideDown();
         $submitButton.hide();
       },
-      error: function (response) {
-        $statusMessage.text(':( algo salió mal. Intenta de nuevo.')
-          .slideDown();
+      error: function(response) {
+        $statusMessage.text(":( algo salió mal. Intenta de nuevo.").slideDown();
       }
     });
   });
