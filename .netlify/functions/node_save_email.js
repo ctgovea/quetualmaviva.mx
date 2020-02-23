@@ -1,4 +1,4 @@
-import querystring from "querystring";
+const querystring = require("querystring");
 const pg = require("pg");
 const { POSTGRESQL } = process.env;
 
