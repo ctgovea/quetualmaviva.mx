@@ -36,17 +36,15 @@ $(document).ready(function() {
       crossDomain: true,
       success: function(response) {
         console.log(response);
-        if (response.statusCode === 200) {
-          const $msg = $("#signupMsg");
-          $msg
-            .html(
-              '<i class="fa fa-check" style="padding-right:5px"></i>¡Listo! Gracias por suscribirte.'
-            )
-            .addClass("success")
-            .removeClass("error")
-            .slideDown();
-          $form.hide();
-        }
+        const $msg = $("#signupMsg");
+        $msg
+          .html(
+            '<i class="fa fa-check" style="padding-right:5px"></i>¡Listo! Gracias por suscribirte.'
+          )
+          .addClass("success")
+          .removeClass("error")
+          .slideDown();
+        $form.hide();
       },
       error: function(response) {
         $msg
