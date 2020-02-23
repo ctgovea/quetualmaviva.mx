@@ -2,6 +2,7 @@ const http = require("http");
 const url = require("url");
 const wildcards = require("disposable-email-domains/wildcard.json");
 const pg = require("pg");
+const { POSTGRESQL } = process.env;
 
 const connectionString = POSTGRESQL;
 
