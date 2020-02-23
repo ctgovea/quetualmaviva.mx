@@ -40,14 +40,15 @@ exports.handler = async (event, context) => {
   const emailDomain = getEmailDomain(email);
 
   if (email === "" || emailDomain === "") {
-    res.statusCode = 400;
-    res.write(
-      "Please insert a correct valid email, no temporary emails, thank you."
-    );
-    res.end();
+    return {
+      statusCode: 400,
+      body: "Escribe un email válido."
+    };
   } else {
     saveEmailDB(email);
-    res.write("Saved your email, thank you.");
-    res.end();
+    return {
+      statusCode: 200,
+      body: "Gracias por registrarte."
+    };
   }
 };
