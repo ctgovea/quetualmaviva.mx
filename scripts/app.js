@@ -76,8 +76,8 @@ $(document).ready(function() {
 
   $("#registerForm").submit(function(e) {
     e.preventDefault();
-    let form = $(this);
-    if (!form.valid()) return false;
+    let $form = $(this);
+    if (!$form.valid()) return false;
 
     let $submitButton = $("#submit");
     $submitButton.val("Enviando...");
@@ -86,7 +86,6 @@ $(document).ready(function() {
     $statusMessage.hide();
 
     $.post($form.attr("action"), $form.serialize()).then(function() {
-      console.log(response);
       $statusMessage.text("¡Gracias! Tu registro fue enviado.").slideDown();
       $submitButton.hide();
     });
