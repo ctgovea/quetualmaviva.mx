@@ -1,5 +1,4 @@
 import querystring from "querystring";
-const wildcards = require("disposable-email-domains/wildcard.json");
 const pg = require("pg");
 const { POSTGRESQL } = process.env;
 
@@ -16,10 +15,6 @@ function getEmailDomain(email) {
   } else {
     return "";
   }
-}
-
-function wildcardDomainCheck(domain) {
-  return wildcards.indexOf(domain) > -1;
 }
 
 function saveEmailDB(email) {
@@ -44,7 +39,7 @@ exports.handler = async (event, context) => {
   const email = params.email || "";
   const emailDomain = getEmailDomain(email);
 
-  if (email === "" || emailDomain === "" || wildcardDomainCheck(emailDomain)) {
+  if (email === "" || emailDomain === "") {
     res.statusCode = 400;
     res.write(
       "Please insert a correct valid email, no temporary emails, thank you."
