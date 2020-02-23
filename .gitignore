@@ -2,3 +2,4 @@
 error_log
 .ftpquota
 .vscode/settings.json
+node_modules
