@@ -42,7 +42,7 @@ exports.handler = async (event, context) => {
   if (email === "" || emailDomain === "") {
     return {
       statusCode: 400,
-      body: "Escribe un email válido."
+      body: `Escribe un email válido ${email}`
     };
   } else {
     saveEmailDB(email);
