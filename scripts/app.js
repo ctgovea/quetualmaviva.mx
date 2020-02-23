@@ -19,9 +19,6 @@ $(document).ready(function() {
     }
   });
 
-  const register_URL =
-    "https://eovsmc4uu6.execute-api.us-east-1.amazonaws.com/dev/api/register";
-
   function hello(email) {
     const url = "/.netlify/functions/hello";
 
@@ -88,32 +85,10 @@ $(document).ready(function() {
     let $statusMessage = $("#formStatusMessage");
     $statusMessage.hide();
 
-    const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
-    const phone = document.getElementById("phone").value;
-    const comments = document.getElementById("comments").value;
-
-    var data = JSON.stringify({
-      name,
-      email,
-      phone,
-      comments
-    });
-
-    $.ajax({
-      type: "POST",
-      url: register_URL,
-      data: data,
-      contentType: "application/json",
-      crossDomain: true,
-      success: function(response) {
-        console.log(response);
-        $statusMessage.text("¡Gracias! Tu registro fue enviado.").slideDown();
-        $submitButton.hide();
-      },
-      error: function(response) {
-        $statusMessage.text(":( algo salió mal. Intenta de nuevo.").slideDown();
-      }
+    $.post($form.attr("action"), $form.serialize()).then(function() {
+      console.log(response);
+      $statusMessage.text("¡Gracias! Tu registro fue enviado.").slideDown();
+      $submitButton.hide();
     });
   });
 });
