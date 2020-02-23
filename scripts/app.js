@@ -41,8 +41,6 @@ $(document).ready(function() {
     });
   }
 
-  // Signup
-
   $("#newsletterForm").submit(function(e) {
     e.preventDefault();
 
@@ -56,7 +54,6 @@ $(document).ready(function() {
     hello(
       document.getElementById("emailSignup").value,
       function onSuccess() {
-        console.log(response);
         $msg
           .html(
             '<i class="fa fa-check" style="padding-right:5px"></i>¡Listo! Gracias por suscribirte.'
@@ -75,8 +72,6 @@ $(document).ready(function() {
       }
     );
   });
-
-  // Registration
 
   $("#registerForm").validate({
     messages: {
