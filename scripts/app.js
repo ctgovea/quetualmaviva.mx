@@ -19,11 +19,8 @@ $(document).ready(function() {
     }
   });
 
-  function hello(email) {
+  function hello(email, onSuccess, onFailure) {
     const url = "/.netlify/functions/hello";
-
-    let $submit = $('#signupForm [type="submit"]');
-    $submit.prop("disabled", true);
 
     $.ajax({
       type: "POST",
@@ -32,8 +29,34 @@ $(document).ready(function() {
       contentType: "application/json",
       crossDomain: true,
       success: function(response) {
+        if (typeof onSuccess === "function") {
+          onSuccess();
+        }
+      },
+      error: function(response) {
+        if (typeof onFailure === "function") {
+          onFailure();
+        }
+      }
+    });
+  }
+
+  // Signup
+
+  $("#newsletterForm").submit(function(e) {
+    e.preventDefault();
+
+    const $msg = $("#signupMsg");
+    let $form = $(this);
+    if (!$form.valid()) return false;
+
+    let $submit = $('#newsletterForm [type="submit"]');
+    $submit.prop("disabled", true);
+
+    hello(
+      document.getElementById("emailSignup").value,
+      function onSuccess() {
         console.log(response);
-        const $msg = $("#signupMsg");
         $msg
           .html(
             '<i class="fa fa-check" style="padding-right:5px"></i>¡Listo! Gracias por suscribirte.'
@@ -43,26 +66,14 @@ $(document).ready(function() {
           .slideDown();
         $form.hide();
       },
-      error: function(response) {
+      function onFailure() {
         $msg
           .text(":( algo salió mal. Intenta de nuevo.")
           .addClass("error")
           .slideDown();
         $submit.prop("disabled", false);
       }
-    });
-  }
-
-  // Signup
-
-  $("#signupForm").submit(function(e) {
-    e.preventDefault();
-
-    let $form = $(this);
-    if (!$form.valid()) return false;
-
-    const email = document.getElementById("emailSignup").value;
-    hello(email);
+    );
   });
 
   // Registration
