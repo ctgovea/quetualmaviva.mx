@@ -1,5 +1,4 @@
-const http = require("http");
-const url = require("url");
+import querystring from "querystring";
 const wildcards = require("disposable-email-domains/wildcard.json");
 const pg = require("pg");
 const { POSTGRESQL } = process.env;
@@ -32,29 +31,28 @@ function saveEmailDB(email) {
   });
 }
 
-http
-  .createServer(function(req, res) {
-    var parts = url.parse(req.url, true);
-    var query = parts.query;
+exports.handler = async (event, context) => {
+  // Only allow POST
+  if (event.httpMethod !== "POST") {
+    return { statusCode: 405, body: "Method Not Allowed" };
+  }
 
-    const email = query.email;
-    const emailDomain = getEmailDomain(email);
+  // When the method is POST, the name will no longer be in the event’s
+  // queryStringParameters – it’ll be in the event body encoded as a query string
+  const params = querystring.parse(event.body);
 
-    if (
-      email === undefined ||
-      email === "" ||
-      emailDomain === "" ||
-      wildcardDomainCheck(emailDomain)
-    ) {
-      res.statusCode = 400;
-      res.write(
-        "Please insert a correct valid email, no temporary emails, thank you."
-      );
-      res.end();
-    } else {
-      saveEmailDB(email);
-      res.write("Saved your email, thank you.");
-      res.end();
-    }
-  })
-  .listen(8080);
+  const email = params.email || "";
+  const emailDomain = getEmailDomain(email);
+
+  if (email === "" || emailDomain === "" || wildcardDomainCheck(emailDomain)) {
+    res.statusCode = 400;
+    res.write(
+      "Please insert a correct valid email, no temporary emails, thank you."
+    );
+    res.end();
+  } else {
+    saveEmailDB(email);
+    res.write("Saved your email, thank you.");
+    res.end();
+  }
+};
