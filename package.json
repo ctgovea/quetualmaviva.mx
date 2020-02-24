@@ -1,0 +1,27 @@
+{
+  "name": "quetualmaviva.mx",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "prebuild": "cd .netlify/functions/node_save_email && npm i",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/govea/quetualmaviva.mx.git"
+  },
+  "author": "Carlos Torres",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/govea/quetualmaviva.mx/issues"
+  },
+  "homepage": "https://github.com/govea/quetualmaviva.mx#readme",
+  "dependencies": {
+    "disposable-email-domains": "^1.0.52",
+    "http": "0.0.0",
+    "pg": "^7.18.2",
+    "querystring": "^0.2.0",
+    "url": "^0.11.0"
+  }
+}

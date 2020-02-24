@@ -20,7 +20,7 @@ $(document).ready(function() {
   });
 
   function hello(email, onSuccess, onFailure) {
-    const url = "/.netlify/functions/hello";
+    const url = "/.netlify/functions/node_save_email";
 
     $.ajax({
       type: "POST",
@@ -51,8 +51,9 @@ $(document).ready(function() {
     let $submit = $('#newsletterForm [type="submit"]');
     $submit.prop("disabled", true);
 
+    let email = document.getElementById("emailSignup").value;
     hello(
-      document.getElementById("emailSignup").value,
+      email,
       function onSuccess() {
         $msg
           .html(
