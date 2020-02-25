@@ -36,7 +36,7 @@ exports.handler = async (event, context) => {
   // queryStringParameters – it’ll be in the event body encoded as a query string
   // const params = querystring.parse(event.body);
 
-  const { email } = JSON.parse(event.body) || "";
+  const { email } = event.body || "";
 
   // const email = params.email || "";
   const emailDomain = getEmailDomain(email);
