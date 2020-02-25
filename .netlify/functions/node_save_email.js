@@ -37,7 +37,8 @@ exports.handler = async (event, context) => {
   // const params = querystring.parse(event.body);
   console.log(event.body);
 
-  const { email } = event.body || "";
+  let { email } = event.body || "";
+  email = decodeURIComponent(email);
 
   // const email = params.email || "";
   const emailDomain = getEmailDomain(email);
