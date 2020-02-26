@@ -35,10 +35,8 @@ exports.handler = async (event, context) => {
   // When the method is POST, the name will no longer be in the event’s
   // queryStringParameters – it’ll be in the event body encoded as a query string
   // const params = querystring.parse(event.body);
-  console.log(event.body);
-
-  let { email } = event.body || "";
-  email = decodeURIComponent(email);
+  const { payload } = JSON.parse(event.body);
+  let { email } = payload || "";
 
   // const email = params.email || "";
   const emailDomain = getEmailDomain(email);
@@ -46,7 +44,7 @@ exports.handler = async (event, context) => {
   if (email === "" || emailDomain === "") {
     return {
       statusCode: 400,
-      body: `Escribe un email válido ${email} event.body: ${event.body}`
+      body: `Escribe un email válido ${email} payload: ${payload} event.body: ${event.body}`
     };
   } else {
     saveEmailDB(email);
