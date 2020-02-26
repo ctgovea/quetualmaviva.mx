@@ -22,7 +22,6 @@ $(document).ready(function() {
   function hello(email, onSuccess, onFailure) {
     const url = "/.netlify/functions/node_save_email";
 
-    email = encodeURIComponent(email);
     var data = { email };
 
     $.ajax({
