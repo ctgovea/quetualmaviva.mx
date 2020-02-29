@@ -3,7 +3,6 @@ const pg = require("pg");
 const { POSTGRESQL } = process.env;
 
 const connectionString = POSTGRESQL;
-
 const client = new pg.Client(connectionString);
 client.connect();
 
@@ -17,13 +16,12 @@ function getEmailDomain(email) {
   }
 }
 
-function saveEmailDB(email) {
+async function saveEmailDB(email) {
+  console.log(`Saving email ${email}...`);
   const insertQuery = "INSERT INTO email_signup(email) VALUES($1)";
-  client.query(insertQuery, [email], function(err, result) {
-    if (err) console.log(err.detail);
-    if (result) console.log(result.rowCount);
-    client.end();
-  });
+
+  await client.query(insertQuery, [email]);
+  await client.end();
 }
 
 exports.handler = async (event, context) => {
@@ -46,7 +44,7 @@ exports.handler = async (event, context) => {
       body: `Escribe un email válido ${email} event.body: ${event.body} body ${body}`
     };
   } else {
-    saveEmailDB(email);
+    await saveEmailDB(email);
     return {
       statusCode: 200,
       body: `Gracias por registrarte ${email}`
