@@ -3,7 +3,6 @@ const pg = require("pg");
 const { POSTGRESQL } = process.env;
 
 const connectionString = POSTGRESQL;
-
 const client = new pg.Client(connectionString);
 client.connect();
 
@@ -17,13 +16,12 @@ function getEmailDomain(email) {
   }
 }
 
-function saveEmailDB(email) {
+async function saveEmailDB(email) {
   const insertQuery = "INSERT INTO email_signup(email) VALUES($1)";
-  client.query(insertQuery, [email], function(err, result) {
-    if (err) console.log(err.detail);
-    if (result) console.log(result.rowCount);
-    client.end();
-  });
+
+  const res = await client.query(insertQuery, [email]);
+  console.log(res);
+  await client.end();
 }
 
 exports.handler = async (event, context) => {

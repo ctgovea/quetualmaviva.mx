@@ -19,6 +19,7 @@
   "homepage": "https://github.com/govea/quetualmaviva.mx#readme",
   "dependencies": {
     "disposable-email-domains": "^1.0.52",
+    "dotenv": "^8.2.0",
     "http": "0.0.0",
     "pg": "^7.18.2",
     "querystring": "^0.2.0",
