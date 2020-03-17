@@ -1,5 +1,5 @@
 const querystring = require("querystring");
-const db = require("../db");
+const db = require("./db");
 
 function getEmailDomain(email) {
   if (email === undefined) return "";
