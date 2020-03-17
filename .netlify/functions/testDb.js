@@ -30,8 +30,13 @@ exports.handler = async (event, context) => {
   console.log("querystring...");
   console.log(body);
 
+  console.log("email");
+  console.log(email);
   // const email = params.email || "";
   const emailDomain = getEmailDomain(email);
+
+  console.log("emailDomain");
+  console.log(emailDomain);
 
   if (email === "" || emailDomain === "") {
     return {
