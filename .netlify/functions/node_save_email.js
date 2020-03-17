@@ -4,7 +4,6 @@ const { POSTGRESQL } = process.env;
 
 const connectionString = POSTGRESQL;
 const client = new pg.Client(connectionString);
-client.connect();
 
 function getEmailDomain(email) {
   if (email === undefined) return "";
@@ -20,6 +19,7 @@ async function saveEmailDB(email) {
   console.log(`Saving email ${email}...`);
   const insertQuery = "INSERT INTO email_signup(email) VALUES($1)";
 
+  client.connect();
   await client.query(insertQuery, [email]);
   await client.end();
 }
