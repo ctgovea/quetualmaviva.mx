@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/govea/quetualmaviva.mx#readme",
   "dependencies": {
+    "@sendgrid/mail": "^6.5.3",
     "disposable-email-domains": "^1.0.52",
     "dotenv": "^8.2.0",
     "http": "0.0.0",

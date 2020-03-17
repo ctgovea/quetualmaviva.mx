@@ -5,3 +5,4 @@ error_log
 node_modules
 .env
 .test/
+sendgrid.env
